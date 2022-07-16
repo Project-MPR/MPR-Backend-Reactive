@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap');
+
+.App {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    font-family: "Nanum Pen Script", serif;
+}
+
+/* Navbar */
+.Navbar {
+    height: 50px;
+    flex-grow: 1;
+
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: left;
+    z-index: 10;
+
+    align-items: flex-start;
+}
+
+.Navbar span {
+    font-size: 25px;
+    padding-top: 7px;
+    padding-left: 20px;
+}
+
+.Navbar .NavInputWrapper {
+    padding-top: 7px;
+
+    min-width: 60%;
+    background-color: white;
+
+    border: 1px solid lightgray;
+    border-radius: 9px;
+    box-shadow: 8px 8px 4px -6px;
+    z-index: 20;
+    margin-bottom: 0;
+
+    text-align: center;
+
+}
+
+.Navbar .NavInputWrapper .NavInput {
+    min-height: 27px;
+    min-width: 95%;
+
+    border-radius: 5px;
+}
+
+.Navbar .NavInputWrapper .NavInputList {
+    background-color: white;
+    min-width: 60%;
+
+    z-index: 999;
+    padding: 5px;
+
+    font-size: 20px;
+}
+
+.Navbar .NavInputWrapper .NavInputList div {
+    padding-bottom: 5px;
+    text-align: start;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/* MainContent */
+.MainContent {
+    display: flex;
+    height: calc(100% - 50px); /* total height - navbar height*/
+
+    background-color: white;
+}
+
+.MainContent .myMap {
+    float: right;
+}
+
+/* MainList */
+.MainContent .MainList {
+    width: 25%;
+    height: 95vh;
+    overflow: scroll;
+    font-size: 20px;
+
+    border-right: 1px solid lightgray;
+    padding-right: 5px;
+}
+
+@media (min-width: 400px) {
+    .MainContent .MainList {
+        min-width: 300px;
+        height: 95vh;
+        overflow: scroll;
+        font-size: 20px;
+    }
+
+    .Navbar .NavInputWrapper .NavInput {
+        width: 400px;
+    }
+}
+
+
+.MainContent .MainList .MainListItem {
+    padding: 20px;
+    cursor: pointer;
+
+    border: 1px solid lightgray;
+    border-radius: 5px;
+
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+    box-shadow: 5px 4px 4px -4px gray;
+}
+
+.MainContent .MainList .MainListItem .Categories {
+    display: flex;
+    justify-content: left;
+    margin-top: 10px;
+
+    flex-wrap: wrap;
+}
+
+.MainContent .MainList .MainListItem .Categories div {
+    border: 2px solid gray;
+    border-radius: 8px;
+
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+
+    margin-right: 5px;
+    margin-bottom: 2px;
+
+}
+
+/* OverlayInfo */
+.overlayInfo {
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px 10px;
+    background: rgb(255, 255, 255, 1);
+}
+
+.blank {
+    height: 45px;
+}
+
+.MainContent .MainList .MainListItem .Info .RestaurantName {
+    font-family: "BM Yeonsung", serif;
+    font-size: 30px;
+    font-weight: bold;
+}
